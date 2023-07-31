@@ -85,10 +85,10 @@ function makechange(){
                         dataType: "JSON",
                         success: function(data){
                             location.reload();
-                                    // if(data){
-                                    //     alert(" created");
-                                    // // $('#msg').html(" Patients record sent to Doctor");
-                                    // }
+                                if(data){
+                                    alert(" Patient Details Sent To Doctor");
+                                // $('#msg').html(" Patients record sent to Doctor");
+                                }
 
                         },
                         error: function() { alert("Error posting feed or record already exist."); }

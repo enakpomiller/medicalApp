@@ -50,9 +50,9 @@ class Home extends CI_controller {
                            'username'=>$checklogin->username
                          ];
                          $this->session->set_userdata($data);
-                        return redirect(base_url('home/patient_reg'));
+                        return redirect(base_url('home/patient_reg')); 
                       }else{
-                        $this->session->set_flashdata('error',' Wrong Username or Password');
+                        $this->session->set_flashdata('error','<div class="alert alert-danger"> Wrong Username or Password </div>');
                         return redirect(base_url('home/desk_login'));
                       }
              
@@ -100,6 +100,17 @@ class Home extends CI_controller {
 
   }
 
+  public function delete_patient_rec(){
+      $id  = $this->input->post('id');
+       $this->db->where('id',$id);
+       $del =$this->db->delete('patient_register');
+       if($del){
+        echo true;
+      }else{
+       echo false;
+      }
+
+  }
 
   public function doctors_reg(){
       if($_POST){

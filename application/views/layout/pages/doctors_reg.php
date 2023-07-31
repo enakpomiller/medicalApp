@@ -30,12 +30,10 @@
                                 <input type="password" name="password" id="password" class="form-control" id="contact-email" placeholder="specialty">
                                 <div style="color:red;"> <?=form_error('password')?></div>
                             </div>
-                     
                             <button type="submit" onclick="makechange()" class="btn medilife-btn">  Submit Detials  </button>
                         <!-- </form> -->
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
