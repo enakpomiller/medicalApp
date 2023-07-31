@@ -8,7 +8,7 @@
                         <div class="main-menu h-100">
                             <nav class="navbar h-100 navbar-expand-lg">
                                 <!-- Logo Area  -->
-                                <a class="navbar-brand" href="index-2.html"><img src="<?=base_url()?>assets/img/core-img/logo.png" alt="Logo"></a>
+                                <a class="navbar-brand" href="<?=site_url()?>"><img src="<?=base_url()?>assets/img/core-img/logo.png" alt="Logo"></a>
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
@@ -19,16 +19,16 @@
                                             <a class="nav-link" href="<?=base_url()?>">Home <span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Desk Officer</a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="<?=base_url()?>">Home</a>
+                                                <!-- <a class="dropdown-item" href="<?=base_url()?>">Home</a>
                                                 <a class="dropdown-item" href="">About Usx</a>
                                                 <a class="dropdown-item" href="services.html">Services</a>
                                                 <a class="dropdown-item" href="blog.html">News</a>
                                                 <a class="dropdown-item" href="single-blog.html">News Details</a>
                                                 <a class="dropdown-item" href="contact.html">Contact</a>
-                                                <a class="dropdown-item" href="elements.html">Elements</a>
-                                                <a class="dropdown-item" href="index-icons.html">All Icons</a>
+                                                <a class="dropdown-item" href="elements.html">Elements</a> -->
+                                                <a class="dropdown-item" href="<?=base_url('home/desk_login')?>"> Login</a>
                                             </div>
                                         </li>
                                         <li class="nav-item">
@@ -40,9 +40,9 @@
                                     </ul>
                                     <!-- Appointment Button -->
                                     <a href="<?=base_url('home/doctors_reg')?>" class="btn medilife-appoint-btn ml-30">For <span>Doctors</span> Only</a>
-                                    <a href="<?=base_url('home/doctors_login')?>" class="btn medilife-appoint-btn ml-30"> <span>Doctors</span> Login</a>
+                                    <a href="<?=base_url('home/doctors_login')?>" class="btn medilife-appoint-btn ml-30 text-end"> <span>Doctors</span> Login</a>
 
-                                <a href="<?=base_url('home/logout')?>"> Logout </a>
+                                <a href="<?=base_url('home/logout')?>"  class="btn btn-dark" style="position:relative;left:100px;" onclick=" return confirm(' Do you wish to logout')"> Logout </a>
                                 </div>
                                
                             </nav>
@@ -53,4 +53,6 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+
+
 

@@ -6,8 +6,8 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-content">
-                        <h3 class="breadcumb-title">About us</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer</p>
+                        <h3 class="breadcumb-title">Good Medicals</h3>
+                        <p> We guarantee you good health</p>
                     </div>
                 </div>
             </div>

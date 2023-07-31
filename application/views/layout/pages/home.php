@@ -1,4 +1,14 @@
-
+<style> 
+  .mgt_1{
+    background:url('<?=base_url()?>assets/img/bg-img/medicals.png');
+    background-size: cover;
+    border-radius:5px;
+    height:380px;
+    width:100%;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+</style>
 
 
 <!-- ***** Book An Appoinment Area Start ***** -->
@@ -12,16 +22,16 @@
                                 <div class="medilife-appointment-form">
                                     <form action="#" method="post">
                                         <div class="row align">
-                                             <!-- <button type="submit" style="margin:auto;" class="btn medilife-btn text-center"> Desk Officer (Login) <span>+</span></button>  -->
-
-                                             <a href="<?=base_url('home/desk_login')?>" class="btn medilife-btn text-center" style="margin:auto;">  Desk Officer (Login) </a>
+                                            <div class="mgt_1">
+                                            <a href="<?=base_url('home/desk_login')?>" class="btn medilife-btn text-center" style="position:relative;left:57%;top:60%;">  Desk Officer (Login) </a>
+                                                </div>
                                              
                                         </div>
                                     </form>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-3">
-                                <div class="medilife-contact-info">
+                                <div class="medilife-contact-info mr-5">
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info mb-30">
                                         <img src="<?=base_url()?>assets/img/icons/alarm-clock.png" alt="">
@@ -120,7 +130,7 @@
 
         <!-- ***** Gallery Area Start ***** -->
         <div class="medilife-gallery-area owl-carousel">
-        <!-- Single Gallery Item -->
+        <!-- Single Gallery Item --> 
         <div class="single-gallery-item">
             <img src="<?=base_url()?>assets/img/bg-img/g1.jpg" alt="">
             <div class="view-more-btn">

@@ -10,6 +10,7 @@ class Home extends CI_controller {
         $this->load->helper(array('form','url','text'));
         $this->load->library('form_validation');
         $this->load->library('session');
+        $this->load->model(array('home_model'));
     
     
      }
@@ -71,10 +72,10 @@ class Home extends CI_controller {
 
   public function patient_reg(){
    if($_POST){
-       
-      $data =[
-          'firstname'=>$this->input->post('firstname'),
-          'othernames'=>$this->input->post('othernames'),
+      //  echo "<pre>"; print_r($_POST);die;
+      $data_arr =[
+          'firstname'=>$this->input->post('full'),
+          'othernames'=>$this->input->post('other'),
           'phone'=>$this->input->post('phone'),
           'address'=>$this->input->post('address'),
           'ailment'=>$this->input->post('ailment'),
@@ -82,14 +83,16 @@ class Home extends CI_controller {
           'date'=>$this->input->post('date'),
           'token'=>rand(1,999)
       ];
-       $insert = $this->db->insert('patient_register',$data);
-         if($insert){
-            $this->session->set_flashdata('inserted','<div class="alert alert-success" > Patients Record Created Successfully </div>');
-            return redirect(base_url('home/patient_reg'));
-         }else{
-            echo " cannot insert  ";
-         }
+        $this->db->insert('patient_register',$data_arr);
+       echo true;
+            // if($insert){
+            //    $this->session->set_flashdata('inserted','<div class="alert alert-success" > Patients Record Created Successfully </div>');
+            //    return redirect(base_url('home/patient_reg'));
+            // }else{
+            //    echo " cannot insert  ";
+            // }
    }else{
+      echo false;
       $this->data['title'] = "Register Patient";
       $this->data['page_title'] ="patient_reg";
       $this->load->view('layout/index2',$this->data);
@@ -100,22 +103,23 @@ class Home extends CI_controller {
 
   public function doctors_reg(){
       if($_POST){
-        
          $insert_doc =[
-            'fullnames'=>$this->input->post('fullnames'),
+            'fullnames'=>$this->input->post('full'),
             'phone'=>$this->input->post('phone'),
-            'specialty'=>$this->input->post('specialty'),
+            'specialty'=>$this->input->post('special'),
             'email'=>$this->input->post('email'),
-            'password'=>$this->input->post('password')
+            'password'=>$this->input->post('pass')
         ];
-       $insert = $this->db->insert('doctors_register',$insert_doc);
-            if($insert){
-               $this->session->set_flashdata('inserted','<div class="alert alert-info" >Welcome Doctor</div>');
-               return redirect(base_url('home/doctors_login'));
-            }else{
-               echo " cannot insert  ";
-            }
+        $check = $this->db->get_where('doctors_register',array('email'=>$this->input->post('email')))->row();
+        if($check){
+          echo false;;
+         }else{
+            $insert = $this->db->insert('doctors_register',$insert_doc);
+            echo true;
+         }
+  
       }else{
+         echo false;
          $this->data['title'] = "Register As Doctor";
          $this->data['page_title'] ="doctors_reg";
          $this->load->view('layout/index2',$this->data);
@@ -166,13 +170,46 @@ class Home extends CI_controller {
    
     }
 
-public function prescribe($id){
-   $this->data['title'] = "Doctors Prescription";
-   $this->data['page_title'] ="prescribe";
-   $this->data['patient_details'] = $this->db->get_where('patient_register',array('id'=>$id))->row();
-   $this->load->view('layout/index2',$this->data);
+   public function prescribe ($id){
+      if($_POST){
+         $data =[
+            'patient_id'=>$this->input->post('patient_id'),
+            'prescription'=>$this->input->post('prescription'),
+            'dose'=>$this->input->post('dose'),
+            'date'=>date("D-M-Y")
+          ];
+         $insert = $this->db->insert('prescription',$data);
+         if($insert){
+           $this->session->set_flashdata('success',' Result send successfully');
+           return redirect(base_url('home/prescribe/'.$id));
+         }
 
-}
+      }else{
+         $this->data['title'] = "Doctors Prescription";
+         $this->data['page_title'] ="prescribe";
+         $this->data['patient_details'] = $this->db->get_where('patient_register',array('id'=>$id))->row();
+         $this->load->view('layout/index2',$this->data);
+
+      }
+          
+   }
+
+  
+   public function view_result(){
+      $this->data['title'] = "Login As Doctor";
+      $this->data['result'] = $this->home_model->getallresult();
+      $this->data['page_title'] ="view_result";
+      $this->load->view('layout/index2',$this->data);
+   }
+
+   public function print($id){
+      $this->data['title'] = "Login As Doctor";
+      $this->data['printresult'] = $this->home_model->printresult($id);
+      $this->data['page_title'] ="print";
+      $this->load->view('layout/index2',$this->data);
+   }
+
+
 
 public function logout(){
   session_destroy();
