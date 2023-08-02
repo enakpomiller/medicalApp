@@ -39,16 +39,14 @@
                             <div class="form-group">
                             <h5 class="mt-50"> <?="Doctors Prescription "?> </h5>
                             <input type="hidden" name="patient_id" value="<?=$patient_details->id?>">
-                                 <textarea name="prescription"></textarea>
+                                 <textarea require name="prescription"></textarea>
                                  <p> Dose </p>
-                             <input type="text" name="dose" class="form-control">
+                             <input type="text" required name="dose" class="form-control">
                             </div>
-                        
                         <button type="submit" class="btn btn-primary">Submit </button>
+                        <a href="<?=site_url('home/doct_board')?>" class="btn btn-dark" style="margin-top:40px;"> Prevoius </a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>

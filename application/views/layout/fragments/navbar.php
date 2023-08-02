@@ -40,11 +40,12 @@
                                     </ul>
                                     <!-- Appointment Button -->
                                     <a href="<?=base_url('home/doctors_reg')?>" class="btn medilife-appoint-btn ml-30">For <span>Doctors</span> Only</a>
-                                    <a href="<?=base_url('home/doctors_login')?>" class="btn medilife-appoint-btn ml-30 text-end"> <span>Doctors</span> Login</a>
+                                    <a href="<?=base_url('home/doctors_login')?>" class="btn medilife-appoint-btn ml-30"> <span>Doctors</span> Login</a>
 
-                                <a href="<?=base_url('home/logout')?>"  class="btn btn-dark" style="position:relative;left:100px;" onclick=" return confirm(' Do you wish to logout')"> Logout </a>
+                                <a href="<?=base_url('home/logout')?>"  class="appoint-btn bg-dark pt-2 pb-2 pl-4 pr-4 text-white" style="position:relative;left:100px;" onclick=" return confirm(' Do you wish to logout')"> Logout </a>
+                     
                                 </div>
-                               
+                                
                             </nav>
                         </div>
                     </div>

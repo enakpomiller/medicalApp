@@ -11,7 +11,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Medilife - Health &amp; Medical Template | Home</title>
+    <title> <?=$this->session->fullnames?> </title>
 
     <!-- Favicon  -->
     <link rel="icon" href="<?=base_url()?>assets/img/core-img/favicon.ico">
@@ -35,8 +35,16 @@
                 <div class="row h-100">
                     <div class="col-12 h-100">
                         <div class="h-100 d-md-flex justify-content-between align-items-center">
-                            <p>Welcome to <span>Medifile</span> template</p>
-                            <p>Opening Hours : Monday to Saturday - 8am to 10pm Contact : <span>+12-823-611-8721</span></p>
+                            <p>For Your Web Site Development Contact : <span> 080-5952-6974 Via WhatsApp</span></p>
+                            <p class="text-white" style="position:relative;left:10%;"> 
+                                <?php if($this->session->logged_in){?>
+                                <?=$this->session->fullnames?> 
+                                 <?php }else{?>
+                               <?=$this->session->username?>
+                               <?php  } ?>
+                               
+                            </p>
+                           
                         </div>
                     </div>
                 </div>

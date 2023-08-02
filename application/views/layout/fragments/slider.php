@@ -24,7 +24,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
-                                <h6 data-animation="fadeInUp" data-delay="400ms">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod.</h6>
+                                <h6 data-animation="fadeInUp" data-delay="400ms"> "Wherever the art of medicine is loved, there is also a love of humanity." - Hippocrates</h6>
                                 <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
-                                <h6 data-animation="fadeInUp" data-delay="400ms">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod.</h6>
+                                <h6 data-animation="fadeInUp" data-delay="400ms"> The best doctor is the one you run to and can't find." - Denis Diderot </h6>
                                 <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
-                                <h6 data-animation="fadeInUp" data-delay="400ms">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod.</h6>
+                                <h6 data-animation="fadeInUp" data-delay="400ms"> Medicine is not only a science; it is also an art. It does not consist of compounding pills and  </h6>
                                 <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
                             </div>
                         </div>

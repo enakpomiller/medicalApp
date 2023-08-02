@@ -10,7 +10,7 @@
                             <div class="footer-logo">
                                 <img src="<?=base_url()?>assets/img/core-img/logo.png" alt="">
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                            <p>"Medicine is not only a science; it is also an art. It does not consist of compounding pills and plasters; it deals with the very processes of life, which must be understood before they may be guided." - Paracelsus</p>
                             <div class="footer-social-info">
                                 <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -102,7 +102,8 @@
                         <div class="bottom-footer-content">
                             <!-- Copywrite Text -->
                             <div class="copywrite-text">
-                                <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a>
+                                <!-- <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> -->
+                                <p>For Your Web Site Development Contact : <span> 080-5952-6974 Via WhatsApp</span></p>
 </p>                </div>
                         </div>
                     </div>

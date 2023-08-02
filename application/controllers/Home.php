@@ -100,8 +100,7 @@ class Home extends CI_controller {
 
   }
 
-  public function delete_patient_rec(){
-      $id  = $this->input->post('id');
+  public function delete_patient_rec($id){
        $this->db->where('id',$id);
        $del =$this->db->delete('patient_register');
        if($del){
@@ -151,7 +150,8 @@ class Home extends CI_controller {
                    if($check){
                       $data =[
                         'id'=>$check->id,
-                        'fullnames'=>$check->fullnames
+                        'fullnames'=>$check->fullnames,
+                        'logged_in'=>true
                       ];
                       $this->session->set_userdata($data);
                      return redirect(base_url('home/doct_board'));
@@ -224,7 +224,6 @@ class Home extends CI_controller {
 
 public function logout(){
   session_destroy();
-
   return redirect(base_url('/'));
 }
 

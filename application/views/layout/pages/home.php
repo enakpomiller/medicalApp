@@ -1,11 +1,13 @@
 <style> 
   .mgt_1{
-    background:url('<?=base_url()?>assets/img/bg-img/medicals.png');
+    /* background:url('<?=base_url()?>assets/img/bg-img/medicals.png'); */
+    background:url('<?=base_url()?>assets/img/bg-img/not found.png');
     background-size: cover;
     border-radius:5px;
-    height:380px;
-    width:100%;
+    height:400px;
+    width:130%;
     position: relative;
+    bottom:80px;
     background-repeat: no-repeat;
   }
 </style>
@@ -23,9 +25,8 @@
                                     <form action="#" method="post">
                                         <div class="row align">
                                             <div class="mgt_1">
-                                            <a href="<?=base_url('home/desk_login')?>" class="btn medilife-btn text-center" style="position:relative;left:57%;top:60%;">  Desk Officer (Login) </a>
-                                                </div>
-                                             
+                                              <a href="<?=base_url('home/desk_login')?>" class="btn medilife-btn text-center" style="position:relative;top:106%;left:40%;border-radius:5px;">  Desk Officer (Login) </a>
+                                             </div>  
                                         </div>
                                     </form>
                                 </div>
@@ -65,7 +66,7 @@
                 <div class="col-12 col-lg-4">
                     <div class="medica-about-content">
                         <h2>We always put our pacients first</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                        <p>Giving you the best medical attention you really desire.</p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>The Best Doctors</h5>
-                                    <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                    <p>plasters; it deals with the very processes of life, which must be understood before they may be guided." - Paracelsus.</p>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +92,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>Baby Nursery</h5>
-                                    <p>Dolor sit amet, consecte tuer elit, sed diam nonummy nibh euismod tincidunt ut ldolore magna.</p>
+                                    <p> "The good physician treats the disease; the great physician treats the patient who has the disease." - William Osler</p>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +104,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>Laboratory</h5>
-                                    <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                    <p>To me, there is no greater act of courage than being the one who heals." - Dr. Lee S. Cohen.</p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +116,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>Emergency Room</h5>
-                                    <p>Dolor sit amet, consecte tuer elit, sed diam nonummy nibh euismod tincidunt ut ldolore magna.</p>
+                                    <p> "It is not the healthy who need a doctor, but the sick. I have not come to call the righteous, but sinners to repentance." - Jesus Christ (Mark 2:17).</p>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +171,9 @@
                 <div class="col-12 col-lg-6">
                     <div class="features-content">
                         <h2>A new way to treat pacients in a revolutionary facility</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                        <p>"The doctor of the future will give no medication but will interest his patients in the care of the human frame, diet, and in the cause and prevention of disease." - Thomas Edison 
+                        A physician is obligated to consider more than a diseased organ, more even than the whole man — he must view the man in his world." - Harvey Cushing
+                        </p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
@@ -206,7 +209,7 @@
                                 <a href="#"><img src="<?=base_url()?>assets/img/blog-img/p1.jpg" alt=""></a>
                             </div>
                             <a href="#" class="headline">New drog release soon</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <p>The greatest medicine of all is to teach people how not to need it." - Hippocrates</p>
                             <a href="#" class="comments">3 Comments</a>
                         </div>
                     </div>
@@ -228,7 +231,7 @@
                                 <a href="#"><img src="<?=base_url()?>assets/img/blog-img/p2.jpg" alt=""></a>
                             </div>
                             <a href="#" class="headline">Free dental care</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <p> The human body is the best picture of the human soul." - Ludwig Wittgenstein</p>
                             <a href="#" class="comments">3 Comments</a>
                         </div>
                     </div>
@@ -250,7 +253,7 @@
                                 <a href="#"><img src="<?=base_url()?>assets/img/blog-img/p3.jpg" alt=""></a>
                             </div>
                             <a href="#" class="headline">Good news for the pacients</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <p>Healing is an art. It takes time, it takes practice. It takes love." - Maza Dohta.</p>
                             <a href="#" class="comments">3 Comments</a>
                         </div>
                     </div>
