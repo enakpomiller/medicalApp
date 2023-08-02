@@ -34,8 +34,10 @@
                         <?php endforeach;?>
                       </table>
                      <br>
-                        <button class="btn btn-success" onClick="printdiv('div_print');" style="position:relative;left:86%;"> Print Result </button>
+
                  </div>
+                 <a href="<?=base_url('home/view_result')?>" class="text-white btn-dark pt-2 pb-2 pl-2 pr-2"><i class="fa fa-circle"></i> Prevoius </a>
+                  <button class="btn btn-success" onClick="printdiv('div_print');" style="position:relative;left:76%;"><i class="fa fa-print"></i> Print Result </button>
             </div>
     </section>
 
