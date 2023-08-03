@@ -8,7 +8,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="features-content">
                         <h2>We always put our pacients first</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                        <p> These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness.  </p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness..</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -134,7 +134,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness..</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -147,7 +147,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness..</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -160,7 +160,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness..</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -173,7 +173,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness..</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
