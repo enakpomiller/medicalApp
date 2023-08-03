@@ -31,6 +31,7 @@
                             <td><?=$row->symptoms?></td>
                             <td style="float:right;"> 
                                 <a href="<?=base_url('home/prescribe/'.$row->id)?>" class=" medilife-btn"><i class="fa fa-pencil"></i> Prescribe </a>
+                                <a href="<?=base_url('home/view_prescription/'.$row->id)?>" class=" medilife-btn"><i class="fa fa-eye"></i>View Prescribe </a>
                             </td>
                             </tr>
                             <?php } ?>

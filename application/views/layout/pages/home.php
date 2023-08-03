@@ -60,7 +60,7 @@
 
 
         <!-- ***** About Us Area Start ***** -->
-        <section class="medica-about-us-area section-padding-100-20">
+    <section class="medica-about-us-area section-padding-100-20">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">

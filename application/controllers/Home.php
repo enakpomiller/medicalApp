@@ -214,6 +214,22 @@ class Home extends CI_controller {
       $this->load->view('layout/index2',$this->data);
    }
 
+   public function view_prescription(){
+      $this->data['title'] = "Login As Doctor";
+      $this->data['result'] = $this->db->get('prescription')->result();
+      $this->data['page_title'] ="view_prescription";
+      $this->load->view('layout/index2',$this->data);
+   }
+
+   public function delete_prescription($id){
+        $this->db->where('prescribe_id',$id);
+        $this->db->delete('prescription');
+        
+        $this->session->set_flashdata('deleted','Prescription Deleted Successfully');
+        return redirect(base_url('home/view_prescription/'.$id));
+
+   }
+
    public function print($id){
       $this->data['title'] = "Login As Doctor";
       $this->data['printresult'] = $this->home_model->printresult($id);
