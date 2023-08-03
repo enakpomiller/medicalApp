@@ -7,7 +7,7 @@
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6">
                     <div class="features-content">
-                        <h2>We always put our pacients first</h2>
+                        <h2>We always put our patients first</h2>
                         <p> These quotes reflect the dedication, compassion, and wisdom that is integral to the medical profession. They remind us of the profound impact healthcare professionals have on their patients' lives and the importance of treating the person as a whole, not just their illness.  </p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>

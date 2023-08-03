@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="medica-about-content">
-                        <h2>We always put our pacients first</h2>
+                        <h2>We always put our patients first</h2>
                         <p>Giving you the best medical attention you really desire.</p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
