@@ -271,8 +271,8 @@
                 <div class="col-12 col-lg-6">
                     <div class="emergency-content">
                         <i class="icon-smartphone"></i>
-                        <h2>For Emergency calls</h2>
-                        <h3>+12-823-611-8721</h3>
+                        <h2>For Enquiry (whatsApp)</h2>
+                        <h3>080-5952-6974</h3>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">

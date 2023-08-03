@@ -1,7 +1,6 @@
 
 
 
-
     <section class="medilife-contact-area section-padding-100">
         <div class="container">
             <div class="row">
@@ -9,7 +8,12 @@
                 <div class="col-12 col-lg-6" style="margin:auto;">
                     <div class="contact-form">
                      <h5 class="mb-50"> Desk Login </h5>
-                       <?=$this->session->flashdata('error')?> 
+                         <?php 
+                           if($_SESSION['error']){
+                             echo $_SESSION['error'];
+                             unset($_SESSION['error']);
+                            }
+                          ?>
                         <form action="<?=base_url('home/desk_login')?>" method="POST">
                             <div class="form-group">
                                 <input type="text" name="username" id="username" class="form-control" id="contact-name" placeholder="username">

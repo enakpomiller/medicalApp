@@ -10,7 +10,12 @@
                 <div class="col-12 col-lg-6" style="margin:auto;">
                     <div class="contact-form">
                      <h5 class="mb-50"> Doctors Login </h5>
-                     <?=$this->session->flashdata('inserted')?>
+                      <?php 
+                        if($_SESSION['inserted']){
+                          echo $_SESSION['inserted'];
+                          unset($_SESSION['inserted']);
+                        }
+                       ?>
                      <div class="text-danger"> <?=$this->session->flashdata('error')?> </div>
                         <form action="<?=base_url('home/doctors_login')?>" method="POST">
                             <div class="form-group">

@@ -104,6 +104,7 @@ class Home extends CI_controller {
        $this->db->where('id',$id);
        $del =$this->db->delete('patient_register');
        if($del){
+         return redirect(base_url('home/view_result/'.$id));
         echo true;
       }else{
        echo false;

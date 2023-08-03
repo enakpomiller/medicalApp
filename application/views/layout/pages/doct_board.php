@@ -7,7 +7,7 @@
             <div class="row">
                 <!-- Contact Form Area -->
                 <?php if($patient_rec) { ?>
-               <?=$this->session->fullnames?>
+                 <h5> <?=$this->session->fullnames?> </h5>
                     <table class="table table-striped border-0">
                         <thead>
                             <tr>
@@ -30,7 +30,7 @@
                             <td><?=$row->ailment?></td>
                             <td><?=$row->symptoms?></td>
                             <td style="float:right;"> 
-                                <a href="<?=base_url('home/prescribe/'.$row->id)?>" class="btn btn-primary"><i class="fa fa-pencil"></i> Prescribe </a>
+                                <a href="<?=base_url('home/prescribe/'.$row->id)?>" class=" medilife-btn"><i class="fa fa-pencil"></i> Prescribe </a>
                             </td>
                             </tr>
                             <?php } ?>

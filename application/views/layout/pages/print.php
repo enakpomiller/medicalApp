@@ -24,10 +24,10 @@
                               <tr>
                               <td>  <?=$getship->firstname?> </td>
                               <td>  <?=$getship->othernames?></td>
-                              <td>  <?=$getship->ailment?></td>
-                              <td>  <?=$getship->symptoms?></td>
-                              <td>  <?=$getship->prescription?></td>
-                              <td>  <?=$getship->dose?></td>
+                              <td class='text-danger'>  <?=$getship->ailment?></td>
+                              <td class='text-danger'>  <?=$getship->symptoms?></td>
+                              <td class='text-success'>  <?=$getship->prescription?></td>
+                              <td class='text-success'>  <?=$getship->dose?></td>
                               <td>  <?=$getship->date?></td>
                             </tr>
                           </tbody>

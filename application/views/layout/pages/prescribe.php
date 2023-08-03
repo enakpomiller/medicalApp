@@ -39,9 +39,9 @@
                             <div class="form-group">
                             <h5 class="mt-50"> <?="Doctors Prescription "?> </h5>
                             <input type="hidden" name="patient_id" value="<?=$patient_details->id?>">
-                                 <textarea require name="prescription"></textarea>
+                                 <textarea require name="prescription" id="prescription"></textarea>
                                  <p> Dose </p>
-                             <input type="text" required name="dose" class="form-control">
+                             <input type="text" required name="dose" id="dose" class="form-control">
                             </div>
                         <button type="submit" class="btn btn-primary">Submit </button>
                         <a href="<?=site_url('home/doct_board')?>" class="btn btn-dark" style="margin-top:40px;"> Prevoius </a>
@@ -54,25 +54,35 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <!-- <script>
-        $(document).ready(function() {
-            // Add event listener to the "Add More" button
-            $("#addBtn").click(function() {
-                // Clone the first set of fields and append it to the container
-                var $clone = $(".repeaterRow:first").clone();
-                $("#repeaterContainer").append($clone);
+    <script> 
+function makechange(){
+    const pre = $('#prescription').val();
+    const dose = $('#dose').val();
 
-                // Clear the input values of the cloned fields
-                $clone.find("input").val("");
+     if(pre=="" || dose==""){
+         alert(" please fill all entries ");
+       }else{
+          //e.preventDefault();
+          $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('home/doctors_reg'); ?>",
+                    data: {
+                        pre,
+                        dose
+                    },
+                        dataType: "JSON",
+                        success: function(data){
+                            location.reload();
+                            window.location = "<?=base_url('home/doctors_login')?>";
 
-                // Add event listener to the "Remove" button in the cloned set
-                $clone.find(".removeBtn").click(function() {
-                    $(this).parent().remove();
-                });
-            });
-        });
-    </script> -->
+                        },
+                        error: function() { alert("Error posting feed or record already exist."); }
+                    });
+    }             
 
+ }
+
+
+</script>
 
 
