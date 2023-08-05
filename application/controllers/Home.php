@@ -177,6 +177,7 @@ class Home extends CI_controller {
    public function doct_board(){
       $this->data['title'] = "Login As Doctor";
       $this->data['page_title'] ="doct_board";
+      //  $this->data['patient_rec'] = $this->home_model->getallresult();
       $this->data['patient_rec'] = $this->db->get('patient_register')->result();
       $this->load->view('layout/index2',$this->data);
    
@@ -193,8 +194,9 @@ class Home extends CI_controller {
           ];
          $insert = $this->db->insert('prescription',$data);
          if($insert){
-           $this->session->set_flashdata('success',' Result send successfully');
-           return redirect(base_url('home/prescribe/'.$id));
+           $this->session->set_flashdata('success',' Result Approved and  sent to Desk officer');
+         //   return redirect(base_url('home/prescribe/'.$id));
+         return redirect(base_url('home/doct_board'));
          }
 
       }else{

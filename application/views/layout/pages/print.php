@@ -2,7 +2,7 @@
 
 
 
-    <section class="medilife-contact-area section-padding-100" >
+    <section class="medilife-contact-area section-padding-100 bg-light" >
             <div class="container">
 
                  <div class="card">
@@ -52,7 +52,7 @@
                         
                            <div class="row">
                                 <div class="col-md-6">
-                                  <a href="<?=base_url('home/view_result')?>" class="text-white btn-dark pt-2 pb-2 pl-2 pr-2"><i class="fa fa-backward"></i> Prevoius </a>
+                                  <a href="<?=base_url('home/view_result')?>" class="text-white btn-dark pt-2 pb-2 pl-2 pr-2 ml-3"><i class="fa fa-backward"></i> Prevoius </a>
                                </div>
                              <div class="col-md-4">
                                 <button class="btn btn-success mb-4" onClick="printdiv('div_print');" style="position:relative;left:110%;"><i class="fa fa-print"></i> Print Result </button>

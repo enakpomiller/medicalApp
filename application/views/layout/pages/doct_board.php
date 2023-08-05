@@ -4,6 +4,14 @@
 
     <section class="medilife-contact-area section-padding-100">
         <div class="container">
+            <div class="text-success text-center"> 
+                <?php 
+                  if($_SESSION['success']){
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                  }
+                ?>
+            </div>
             <div class="row">
                 <!-- Contact Form Area -->
                 <?php if($patient_rec) { ?>
@@ -12,6 +20,7 @@
                         <thead>
                             <tr>
                             <th scope="col">#</th>
+                            <th scope="col"> State </th>
                             <th scope="col">Patient Firstname</th>
                             <th scope="col">Other Names</th>
                             <th scope="col">Phone Number</th>
@@ -24,6 +33,7 @@
                         <?php $counter=1; foreach($patient_rec as $row){ ?>
                             <tr>
                             <th scope="row"><?=$counter++;?></th>
+                            <td><?=$this->db->get_where('prescription',array('patient_id'=>$row->id))->row()==1?'<div class="alert alert-success pt-1 pb-1 text-center">Result Approved</div>':'<div class="alert alert-danger pt-1 pb-1 text-center">Result Pending</div>'?></td>
                             <td><?=$row->firstname?></td>
                             <td><?=$row->othernames?></td>
                             <td><?=$row->phone?></td>
