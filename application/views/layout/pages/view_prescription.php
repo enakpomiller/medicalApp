@@ -43,7 +43,7 @@
                         </div>
                    
                     <?php } ?>
-                    <a href="<?=site_url('home/doct_board')?>" class="medilife bg-dark text-white pr-4 pl-4 pt-2 pb-2"> Prev </a>
+                    <a href="<?=site_url('home/doct_board')?>" class="medilife bg-dark text-white pr-4 pl-4 pt-2 pb-2"><i class="fa fa-backward"></i> Prev </a>
             </div>
         </div>
     </section>

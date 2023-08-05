@@ -202,6 +202,8 @@ class Home extends CI_controller {
       }else{
          $this->data['title'] = "Doctors Prescription";
          $this->data['page_title'] ="prescribe";
+         $this->data['active'] =  $this->db->get_where('prescription',array('patient_id'=>$this->uri->segment(3)))->row();
+         $this->data['user'] = $this->db->get_where('patient_register',array('id'=>$this->uri->segment(3)))->row();
          $this->data['patient_details'] = $this->db->get_where('patient_register',array('id'=>$id))->row();
          $this->load->view('layout/index2',$this->data);
 

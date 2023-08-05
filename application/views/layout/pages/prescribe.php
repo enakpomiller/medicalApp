@@ -3,6 +3,14 @@
 
     <section class="medilife-contact-area section-padding-100">
         <div class="container">
+            <?php if(($active)>0) { ?>
+                <div class="container text-center">
+                    <img src="<?=base_url('assets/img/bg-img/not found.png')?>" style="width:25%;position:relative;bottom:50px;">
+                    <h5 style="position:relative;bottom:50px;"> <?=ucfirst($user->firstname)?>  <?=ucfirst($user->othernames)?> </h5>
+                    <p style="position:relative;bottom:60px;"> Sorry! Prescription has been made and test result Approved for this patient</p>
+                    <a href="<?=site_url('home/doct_board')?>" class="btn  medilife-appoint-btn pl-4 pr-4" style="position:relative;bottom:60px;background:#006cff;color:white;"><i class="fa fa-backward"></i> Previous </a>
+                </div>
+           <?php }else{?>
             <div class="row">
                 <!-- Contact Form Area -->
                 <div class="col-12 col-lg-6" style="margin:auto;">
@@ -44,12 +52,13 @@
                              <input type="text" required name="dose" id="dose" class="form-control">
                             </div>
                         <button type="submit" class="btn btn-primary">Submit </button>
-                        <a href="<?=site_url('home/doct_board')?>" class="btn btn-dark" style="margin-top:40px;"> Prevoius </a>
+                        <a href="<?=site_url('home/doct_board')?>" class="btn btn-dark" style="margin-top:40px;"><i class="fa fa-backward"></i> Prevoius </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+     <?php } ?>
+ </section>
 
 
 

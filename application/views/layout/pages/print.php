@@ -3,7 +3,7 @@
 
 
     <section class="medilife-contact-area section-padding-100 bg-light" >
-            <div class="container">
+            <div class="container" style="position:relative;bottom:50px;">
 
                  <div class="card">
                     <div class="card-header bg-dark text-center">
@@ -13,19 +13,19 @@
                          <?php foreach($printresult as $getship){?>
                                 <div class="row">
                                    <div class="col-md-10">
-                                       <label> <label><i class="fa fa-user"></i> Name: <?=$getship->firstname."  ".$getship->othernames?> </label><p>
-                                       <label><label><i class="fa fa-home"></i> Address: <?=$getship->address?></label><br>
+                                       <label> <label><i class="fa fa-user"></i> Name: <?=ucfirst($getship->firstname)."  ".ucfirst($getship->othernames)?> </label><p>
+                                       <label><label><i class="fa fa-home"></i> Address: <?=ucfirst($getship->address)?></label><br>
                                        <label><i class="fa fa-phone"></i> Phone : <?=$getship->phone?></label>
                                    </div>
 
                                    <div class="col-md-2">
                                        <label><i class="fa fa-bolt"></i>  Date </label><p>
                                        <label><?=$getship->date?>< </label>
-                                       <label><i class="fa fa-hashtag"></i> Receipt No: <?="000".$getship->id?> </label>
+                                       <label><i class="fa fa-hashtag"></i> Receipt No: <?="MD0".$getship->id?> </label>
                                    </div>
                                 </div>
                                 <h2 class="text-center mt-2"> Result </h2>
-                                <table class="table" style="margin-top:50px;margin-bottom:50px;">
+                                <table class="table" style="margin-bottom:40px;">
                                     <thead>
                                       <tr>
                                       <th> Ailment </th>
@@ -37,8 +37,8 @@
                                     </thead>
                                     <tbody>
                                       <tr>
-                                      <td class='text-danger'>  <?=$getship->ailment?></td>
-                                      <td class='text-danger'>  <?=$getship->symptoms?></td>
+                                      <td class='text-danger'>  <?=ucfirst($getship->ailment)?></td>
+                                      <td class='text-danger'>  <?=ucfirst($getship->symptoms)?></td>
                                       <td class='text-success'>  <?=$getship->prescription?></td>
                                       <td class='text-success'>  <?=$getship->dose?></td>
                                       <td><?=$getship->status==1?'<b">Approved</b>':'<div class="text-danger">not approved</div>'?></td>
