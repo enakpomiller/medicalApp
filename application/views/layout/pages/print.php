@@ -4,41 +4,65 @@
 
     <section class="medilife-contact-area section-padding-100" >
             <div class="container">
-                     <div id="div_print">
-                        <h2 class="text-center"> Patient Result </h2>
-                     <table class="table">
-                          <thead>
-                              <tr>
-                                <th>First Name</th>
-                                <th> Other Names </th>
-                                <th> Ailment </th>
-                                <th> Symptoms </th>
-                                <th> Prescription </th>
-                                <td> Dose </td>
-                                <td> Date </td>
-                             </tr>
-                           </thead>
-                              <?php foreach($printresult as $getship):?>
 
-                            <tbody>
-                              <tr>
-                              <td>  <?=$getship->firstname?> </td>
-                              <td>  <?=$getship->othernames?></td>
-                              <td class='text-danger'>  <?=$getship->ailment?></td>
-                              <td class='text-danger'>  <?=$getship->symptoms?></td>
-                              <td class='text-success'>  <?=$getship->prescription?></td>
-                              <td class='text-success'>  <?=$getship->dose?></td>
-                              <td>  <?=$getship->date?></td>
-                            </tr>
-                          </tbody>
-                        <?php endforeach;?>
-                      </table>
-                     <br>
+                 <div class="card">
+                    <div class="card-header bg-dark text-center">
+                    <a class="navbar-brand" href="<?=site_url('home/print/'.$this->uri->segment(3))?>"><img src="<?=base_url()?>assets/img/core-img/logo.png" alt="Logo"></a>
+                        </div>
+                      <div class="card-body" id="div_print">
+                         <?php foreach($printresult as $getship){?>
+                                <div class="row">
+                                   <div class="col-md-10">
+                                       <label> <label><i class="fa fa-user"></i> Name: <?=$getship->firstname."  ".$getship->othernames?> </label><p>
+                                       <label><label><i class="fa fa-home"></i> Address: <?=$getship->address?></label><br>
+                                       <label><i class="fa fa-phone"></i> Phone : <?=$getship->phone?></label>
+                                   </div>
 
-                 </div>
-                 <a href="<?=base_url('home/view_result')?>" class="text-white btn-dark pt-2 pb-2 pl-2 pr-2"><i class="fa fa-circle"></i> Prevoius </a>
-                  <button class="btn btn-success" onClick="printdiv('div_print');" style="position:relative;left:76%;"><i class="fa fa-print"></i> Print Result </button>
+                                   <div class="col-md-2">
+                                       <label><i class="fa fa-bolt"></i>  Date </label><p>
+                                       <label><?=$getship->date?>< </label>
+                                       <label><i class="fa fa-hashtag"></i> Receipt No: <?="000".$getship->id?> </label>
+                                   </div>
+                                </div>
+                                <h2 class="text-center mt-2"> Result </h2>
+                                <table class="table" style="margin-top:50px;margin-bottom:50px;">
+                                    <thead>
+                                      <tr>
+                                      <th> Ailment </th>
+                                      <th> Symptoms </th>
+                                      <th> Prescription </th>
+                                      <th> Dose </th>
+                                      <th> Status </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                      <td class='text-danger'>  <?=$getship->ailment?></td>
+                                      <td class='text-danger'>  <?=$getship->symptoms?></td>
+                                      <td class='text-success'>  <?=$getship->prescription?></td>
+                                      <td class='text-success'>  <?=$getship->dose?></td>
+                                      <td><?=$getship->status==1?'<b">Approved</b>':'<div class="text-danger">not approved</div>'?></td>
+                                      </tr>
+
+                                    </tbody>
+                                 </table>
+                                 <a class="navbar-brand" href="<?=site_url()?>"><img src="<?=base_url()?>assets/img/core-img/approve1.png" style="width:40%;margin-left:260%;" alt="Result Approved"></a>
+                              <?php } ?>
+                        </div>
+                        
+                           <div class="row">
+                                <div class="col-md-6">
+                                  <a href="<?=base_url('home/view_result')?>" class="text-white btn-dark pt-2 pb-2 pl-2 pr-2"><i class="fa fa-backward"></i> Prevoius </a>
+                               </div>
+                             <div class="col-md-4">
+                                <button class="btn btn-success mb-4" onClick="printdiv('div_print');" style="position:relative;left:110%;"><i class="fa fa-print"></i> Print Result </button>
+                             </div>
+                          </div>
+                   </div>
+
             </div>
+            </div>
+
     </section>
 
 

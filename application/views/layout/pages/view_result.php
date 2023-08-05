@@ -13,6 +13,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Patient Firstname</th>
                             <th scope="col">Other Names</th>
+                            <th scope="col"> Status </th>
                             <th scope="col" style="float:right;">Action</th>
                             </tr>
                         </thead>
@@ -22,8 +23,9 @@
                             <th scope="row"><?=$counter++;?></th>
                             <td><?=$row->firstname?></td>
                             <td><?=$row->othernames?></td>
+                            <td><?=$row->status==1?'<div class="text-primary">Result Approved</div>':'<div class="text-danger">not approved</div>'?></td>
                             <td style="float:right;"> 
-                            <a href="<?=base_url('home/print/'.$row->id)?>" class="appoint-btn bg-primary pl-4 pr-2 text-white pt-2 pb-2"><i class="fa fa-eye"></i> View </a>
+                            <a href="<?=base_url('home/print/'.$row->id)?>" class="appoint-btn bg-primary pl-4 pr-2 text-white pt-2 pb-2"><i class="fa fa-eye"></i> View Result </a>
                               <a href="<?=base_url('home/delete_patient_rec/'.$row->id)?>" onclick="return confirm(' Action Will Delete!')"  class="appoint bg-danger pl-2 pr-2 text-white pt-2 pb-2 text-end"><i class="fa fa-trash"></i> Delete  </a>
                             </td>
                             </tr>

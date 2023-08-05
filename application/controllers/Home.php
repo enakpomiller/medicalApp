@@ -188,6 +188,7 @@ class Home extends CI_controller {
             'patient_id'=>$this->input->post('patient_id'),
             'prescription'=>$this->input->post('prescription'),
             'dose'=>$this->input->post('dose'),
+            'status'=>'1',
             'date'=>date("D-M-Y")
           ];
          $insert = $this->db->insert('prescription',$data);

@@ -1,8 +1,8 @@
 
 
+    <a href="<?=base_url('home/view_prescription/'.$row->id)?>" class=" medilife bg-dark pt-2 pb-2 pr-2 pl-2 text-white" style="position:relative;left:78%;top:70px;"><i class="fa fa-eye"></i>View Prescription </a>
 
-
-    <section class="medilife-contact-area section-padding-100" >
+    <section class="medilife-contact-area section-padding-100">
         <div class="container">
             <div class="row">
                 <!-- Contact Form Area -->
@@ -31,7 +31,6 @@
                             <td><?=$row->symptoms?></td>
                             <td style="float:right;"> 
                                 <a href="<?=base_url('home/prescribe/'.$row->id)?>" class=" medilife-btn"><i class="fa fa-pencil"></i> Prescribe </a>
-                                <a href="<?=base_url('home/view_prescription/'.$row->id)?>" class=" medilife-btn"><i class="fa fa-eye"></i>View Prescribe </a>
                             </td>
                             </tr>
                             <?php } ?>
@@ -44,8 +43,7 @@
                             <a href="<?=site_url('/')?>" class="btn  medilife-appoint-btn" style="position:relative;bottom:60px;background:#006cff;color:white;"> Refresh </a>
                         </div>
                     </div>
-                   
-                    <?php } ?>
+          <?php } ?>
             </div>
         </div>
     </section>

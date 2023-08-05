@@ -5,7 +5,7 @@
     <section class="medilife-contact-area section-padding-100" >
         <div class="container">
            <?php if($_SESSION['deleted']) { ?>
-                 <div class="alert alert-danger text-center"><?=$_SESSION['deleted']?></div>
+                 <div class="alert alert-success text-center"><?=$_SESSION['deleted']?></div>
                  <?php unset($_SESSION['deleted']) ?>
              <?php } ?>
             <div class="row">
