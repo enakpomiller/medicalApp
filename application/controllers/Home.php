@@ -12,7 +12,6 @@ class Home extends CI_controller {
         $this->load->library('session');
         $this->load->model(array('home_model'));
     
-    
      }
 
 
@@ -239,6 +238,12 @@ class Home extends CI_controller {
       $this->data['title'] = "Login As Doctor";
       $this->data['printresult'] = $this->home_model->printresult($id);
       $this->data['page_title'] ="print";
+      $this->load->view('layout/index2',$this->data);
+   }
+
+   public function search(){
+      $this->data['title'] = "Login As Doctor";
+      $this->data['page_title'] ="search";
       $this->load->view('layout/index2',$this->data);
    }
 

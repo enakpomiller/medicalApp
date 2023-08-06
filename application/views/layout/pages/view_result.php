@@ -4,6 +4,7 @@
 
     <section class="medilife-contact-area section-padding-100" >
         <div class="container">
+        <a href="<?=site_url('home/search')?>" class="medilife-appoint btn-dark pt-2 pb-2 pl-4 pr-4" style="position:relative;left:85%;"><i class="fa fa-eye"></i> Search Record </a>
             <div class="row">
                 <!-- Contact Form Area -->
                 <?php if($result) { ?>
