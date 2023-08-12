@@ -1,6 +1,6 @@
         <!-- Main Header Area -->
-        
-        
+
+
         <div class="main-header-area" id="stickyHeader">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
@@ -18,6 +18,7 @@
                                         <li class="nav-item active">
                                             <a class="nav-link" href="<?=base_url()?>">Home <span class="sr-only">(current)</span></a>
                                         </li>
+                                        <?php if(!$this->session->userdata('usertype')=="deskofficer"){?>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Desk Officer</a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,6 +32,8 @@
                                                 <a class="dropdown-item" href="<?=base_url('home/desk_login')?>"> Login</a>
                                             </div>
                                         </li>
+                                        <?php } ?>
+                            
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?=base_url('home/aboutus')?>">About Usx</a>
                                         </li>
@@ -39,13 +42,25 @@
                                         </li>
                                     </ul>
                                     <!-- Appointment Button -->
-                                    <a href="<?=base_url('home/doctors_reg')?>" class="btn medilife-appoint-btn ml-30">For <span>Doctors</span> Only</a>
-                                    <a href="<?=base_url('home/doctors_login')?>" class="btn medilife-appoint-btn ml-30"> <span>Doctors</span> Login</a>
 
-                                <a href="<?=base_url('home/logout')?>"  class="appoint-btn bg-dark pt-2 pb-2 pl-4 pr-4 text-white" style="position:relative;left:100px;" onclick=" return confirm(' Do you wish to logout')"> Logout </a>
-                     
+                                    <?php  if($this->session->userdata('usertype')=="doctor"){?>
+
+                                    <?php }else{ ?>
+                                        <a href="<?=base_url('home/doctors_reg')?>" class="btn medilife-appoint-btn ml-30">For <span>Doctors</span> Only</a>
+                                        <a href="<?=base_url('home/doctors_login')?>" class="btn medilife-appoint-btn ml-30"> <span>Doctors</span> Login</a>
+                                        <?php } ?>
+
+                                    <?php  if($this->session->userdata('logged_in')==true){?>
+                                        <a href="<?=base_url('home/logout')?>"  class="appoint-btn bg-dark pt-2 pb-2 pl-4 pr-4 text-white" style="position:relative;left:100px;" onclick=" return confirm(' Do you wish to logout')"> Logout </a>
+
+                                      <?php  }else{?>
+                                    
+                                      <?php  }?>
+                                 
+
+
                                 </div>
-                                
+
                             </nav>
                         </div>
                     </div>
@@ -54,6 +69,3 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
-
-

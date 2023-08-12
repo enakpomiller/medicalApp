@@ -36,20 +36,17 @@
                     <div class="col-12 h-100">
                         <div class="h-100 d-md-flex justify-content-between align-items-center">
                             <p>For Your Web Site Development Contact : <span> 080-5952-6974 Via WhatsApp</span></p>
-                            <p class="text-white" style="position:relative;left:10%;"> 
-                                <?php if($this->session->logged_in){?>
-                                <?=$this->session->fullnames?> 
+                            <p class="text-white" style="position:relative;left:10%;">
+                                <?php if($this->session->userdata('usertype')=="doctor"){?>
+                                <?=$this->session->fullnames?>
                                  <?php }else{?>
                                <?=$this->session->username?>
                                <?php  } ?>
-                               
+
                             </p>
-                           
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-

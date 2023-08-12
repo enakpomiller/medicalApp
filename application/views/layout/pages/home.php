@@ -1,4 +1,4 @@
-<style> 
+<style>
   .mgt_1{
     /* background:url('<?=base_url()?>assets/img/bg-img/medicals.png'); */
     background:url('<?=base_url()?>assets/img/bg-img/not found.png');
@@ -26,7 +26,7 @@
                                         <div class="row align">
                                             <div class="mgt_1">
                                               <a href="<?=base_url('home/desk_login')?>" class="btn medilife-btn text-center" style="position:relative;top:106%;left:40%;border-radius:5px;">  Desk Officer (Login) </a>
-                                             </div>  
+                                             </div>
                                         </div>
                                     </form>
                                 </div>
@@ -131,7 +131,7 @@
 
         <!-- ***** Gallery Area Start ***** -->
         <div class="medilife-gallery-area owl-carousel">
-        <!-- Single Gallery Item --> 
+        <!-- Single Gallery Item -->
         <div class="single-gallery-item">
             <img src="<?=base_url()?>assets/img/bg-img/g1.jpg" alt="">
             <div class="view-more-btn">
@@ -171,7 +171,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="features-content">
                         <h2>A new way to treat pacients in a revolutionary facility</h2>
-                        <p>"The doctor of the future will give no medication but will interest his patients in the care of the human frame, diet, and in the cause and prevention of disease." - Thomas Edison 
+                        <p>"The doctor of the future will give no medication but will interest his patients in the care of the human frame, diet, and in the cause and prevention of disease." - Thomas Edison
                         A physician is obligated to consider more than a diseased organ, more even than the whole man — he must view the man in his world." - Harvey Cushing
                         </p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
@@ -261,7 +261,7 @@
             </div>
         </div>
     </div>
-    <!-- ***** Blog Area End ***** --> 
+    <!-- ***** Blog Area End ***** -->
 
 
         <!-- ***** Emergency Area Start ***** -->

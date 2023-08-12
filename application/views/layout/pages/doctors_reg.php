@@ -27,7 +27,7 @@
                                 <div style="color:red;"> <?=form_error('password')?></div>
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control" id="contact-email" placeholder="specialty">
+                                <input type="password" name="password" id="password" class="form-control" id="contact-email" placeholder="password">
                                 <div style="color:red;"> <?=form_error('password')?></div>
                             </div>
                             <button type="submit" onclick="makechange()" class="btn medilife-btn">  Submit Detials  </button>

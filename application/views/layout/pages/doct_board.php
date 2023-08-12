@@ -41,7 +41,8 @@
                                     <td><?=$row->symptoms?></td>
                                     <td style="float:right;"> 
                                     <?php if($this->db->get_where('prescription',array('patient_id'=>$row->id))->row()->status){ ?>
-                                        <a href="<?=base_url('home/prescribe/'.$row->id)?>" onclick="return confirm('Prescription Has Been done for this patient, do wish to proceed?')" class=" medilife-btn"><i class="fa fa-pencil"></i> Prescribe Drug</a>
+                                        <a href="<?=base_url('home/doct_view_result/'.$row->id)?>"  class=" medilife-btn"> View  Patient Rec </a>
+                                        <!-- <a href="<?=base_url('home/prescribe/'.$row->id)?>" onclick="return confirm('Prescription Has Been done for this patient, do wish to proceed?')" class=" medilife-btn"><i class="fa fa-pencil"></i> Prescribe Drug</a> -->
                                     <?php }else{?>
                                         <a href="<?=base_url('home/prescribe/'.$row->id)?>" class=" medilife-btn"><i class="fa fa-pencil"></i> Prescribe Drug</a>
                                      <?php }?>

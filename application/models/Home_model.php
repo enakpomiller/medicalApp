@@ -14,8 +14,6 @@ class Home_model extends CI_Model{
        return $query->result();
     }
 
-
-
     public function printresult($id){
         $this->db->select('*');
         $this->db->from('patient_register');
@@ -23,6 +21,11 @@ class Home_model extends CI_Model{
         $this->db->where('patient_register.id',$id);
         $query = $this->db->get();
         return $query->result();
+     }
+
+     public function updatepatient($id,$data){
+        $this->db->where('patient_id',$id);
+        return $this->db->update('prescription',$data);
      }
 
 }

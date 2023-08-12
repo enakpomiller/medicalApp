@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
@@ -11,27 +11,27 @@ class Home extends CI_controller {
         $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->model(array('home_model'));
-    
+
      }
 
 
      public function index(){
          $this->data['title'] = "Home";
          $this->data['page_title'] ="home";
-         $this->load->view('layout/index',$this->data); 
+         $this->load->view('layout/index',$this->data);
 
       }
 
       public function aboutus(){
             $this->data['title'] = "About us";
             $this->data['page_title'] ="aboutus";
-            $this->load->view('layout/index2',$this->data); 
+            $this->load->view('layout/index2',$this->data);
       }
 
       public function contact(){
          $this->data['title'] = "About us";
          $this->data['page_title'] ="contact";
-         $this->load->view('layout/index2',$this->data); 
+         $this->load->view('layout/index2',$this->data);
       }
 
 
@@ -46,15 +46,18 @@ class Home extends CI_controller {
                      if($checklogin){
                          $data =[
                            'id'=>$checklogin->id,
-                           'username'=>$checklogin->username
+                           'username'=>$checklogin->username,
+                           'usertype'=>'deskofficer',
+                           'logged_in'=>TRUE
                          ];
+                   
                          $this->session->set_userdata($data);
-                        return redirect(base_url('home/patient_reg')); 
+                        return redirect(base_url('home/patient_reg'));
                       }else{
                         $this->session->set_flashdata('error','<div class="alert alert-danger"> Wrong Username or Password </div>');
                         return redirect(base_url('home/desk_login'));
                       }
-             
+
               }else{
                $this->data['title'] = "About us";
                $this->data['page_title'] ="desk_login";
@@ -65,7 +68,7 @@ class Home extends CI_controller {
             $this->data['page_title'] ="desk_login";
             $this->load->view('layout/index2',$this->data);
          }
-         
+
       }
 
 
@@ -127,7 +130,7 @@ class Home extends CI_controller {
             $insert = $this->db->insert('doctors_register',$insert_doc);
             echo true;
          }
-  
+
       }else{
          echo false;
          $this->data['title'] = "Register As Doctor";
@@ -151,15 +154,17 @@ class Home extends CI_controller {
                       $data =[
                         'id'=>$check->id,
                         'fullnames'=>$check->fullnames,
+                        'usertype'=>'doctor',
                         'logged_in'=>true
                       ];
+                      
                       $this->session->set_userdata($data);
                      return redirect(base_url('home/doct_board'));
                    }else{
                      $this->session->set_flashdata('inserted','<div class="alert alert-danger" >Wrong Username OR Passwordr</div>');
                      return redirect(base_url('home/doctors_login'));
                   }
-               
+
                }else{
                   $this->data['title'] = "Login As Doctor";
                   $this->data['page_title'] ="doctors_login";
@@ -170,7 +175,7 @@ class Home extends CI_controller {
          $this->data['page_title'] ="doctors_login";
          $this->load->view('layout/index2',$this->data);
       }
-   
+
    }
 
    public function doct_board(){
@@ -179,7 +184,7 @@ class Home extends CI_controller {
       //  $this->data['patient_rec'] = $this->home_model->getallresult();
       $this->data['patient_rec'] = $this->db->get('patient_register')->result();
       $this->load->view('layout/index2',$this->data);
-   
+
     }
 
    public function prescribe ($id){
@@ -207,14 +212,47 @@ class Home extends CI_controller {
          $this->load->view('layout/index2',$this->data);
 
       }
-          
-   }
 
-  
+   }
+   
+   public function edit_patient_rec($id){
+      if($_POST){
+         $data =[
+            'prescription'=>$this->input->post('prescription'),
+            'dose'=>$this->input->post('dose'),
+            'status'=>'1',
+            'date'=>date("D-M-Y")
+          ];
+          $update = $this->home_model->updatepatient($id,$data);
+         if($update){
+           $this->session->set_flashdata('success',' Result Updated');
+         //   return redirect(base_url('home/prescribe/'.$id));
+         return redirect(base_url('home/doct_board'));
+         }
+
+      }else{
+         $this->data['title'] = "Doctors Prescription";
+         $this->data['page_title'] ="edit_patient_rec";
+         $this->data['active'] =  $this->db->get_where('prescription',array('patient_id'=>$this->uri->segment(3)))->row();
+         $this->data['user'] = $this->db->get_where('patient_register',array('id'=>$this->uri->segment(3)))->row();
+         $this->data['patient_details'] = $this->db->get_where('patient_register',array('id'=>$id))->row();
+         $this->load->view('layout/index2',$this->data);
+
+      }
+    }
+
    public function view_result(){
       $this->data['title'] = "Login As Doctor";
       $this->data['result'] = $this->home_model->getallresult();
       $this->data['page_title'] ="view_result";
+      $this->load->view('layout/index2',$this->data);
+   }
+   public function doct_view_result($id){
+
+      $this->data['title'] = "Login As Doctor";
+      $this->data['result'] = $this->home_model->printresult($id);
+      //$this->data['result'] = $this->home_model->getallresult();
+      $this->data['page_title'] ="doct_view_result";
       $this->load->view('layout/index2',$this->data);
    }
 
@@ -228,7 +266,7 @@ class Home extends CI_controller {
    public function delete_prescription($id){
         $this->db->where('prescribe_id',$id);
         $this->db->delete('prescription');
-        
+
         $this->session->set_flashdata('deleted','Prescription Deleted Successfully');
         return redirect(base_url('home/view_prescription/'.$id));
 
@@ -242,9 +280,16 @@ class Home extends CI_controller {
    }
 
    public function search(){
-      $this->data['title'] = "Login As Doctor";
-      $this->data['page_title'] ="search";
-      $this->load->view('layout/index2',$this->data);
+      if($_POST){
+        $search = $_POST['search'];
+        $this->db->like('firstname',$search);
+        $this->db->get('patient_register')->row();
+      }else{
+         $this->data['title'] = "Login As Doctor";
+         $this->data['page_title'] ="search";
+         $this->load->view('layout/index2',$this->data);
+      }
+
    }
 
 
@@ -254,6 +299,6 @@ public function logout(){
   return redirect(base_url('/'));
 }
 
-} 
+}
 
 ?>
