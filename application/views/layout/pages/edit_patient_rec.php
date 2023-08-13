@@ -41,9 +41,10 @@
                             <div class="form-group">
                             <h5 class="mt-50"> <?="Doctors Prescription "?> </h5>
                             <input type="hidden" name="patient_id" value="<?=$patient_details->id?>">
-                                 <textarea require name="prescription" id="prescription"></textarea>
+                              <?php $var = $this->db->get_where('prescription',array('patient_id'=>$patient_details->id))->row(); ?>
+                                 <textarea require name="prescription" id="prescription"><?=$var->prescription ?></textarea>
                                  <p> Dose </p>
-                             <input type="text" required name="dose" id="dose" class="form-control">
+                             <input type="text"  name="dose" id="dose" value="<?=$var->dose?>" class="form-control text-dark">
                             </div>
                         <button type="submit" class="btn btn-primary">Submit </button>
                         <a href="<?=site_url('home/doct_board')?>" class="btn btn-dark" style="margin-top:40px;"><i class="fa fa-backward"></i> Prevoius </a>

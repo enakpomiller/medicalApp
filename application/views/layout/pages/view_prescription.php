@@ -39,7 +39,7 @@
                          <div class="container text-center">
                             <img src="<?=base_url('assets/img/bg-img/not found.png')?>" style="width:25%;position:relative;bottom:50px;">
                             <h5 style="position:relative;bottom:60px;">ooPs!!!<br> Doctor Has not prescribe drug for patient!</h5>
-                            <a href="<?=site_url('home/patient_reg')?>" class="btn  medilife-appoint-btn" style="position:relative;bottom:60px;background:#006cff;color:white;"> Refresh </a>
+                            <a href="<?=site_url('home/doct_board')?>" class="btn  medilife-appoint-btn" style="position:relative;bottom:60px;background:#006cff;color:white;"> Refresh </a>
                         </div>
                    
                     <?php } ?>
